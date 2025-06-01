@@ -1,0 +1,75 @@
+
+/* Responsive Design */
+/* width of page <= 1200 px do the following in @media {} */
+@media (max-width: 1200px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        top: 55px; /* set to whatever the height of the header is */
+        background-color: white;
+        width: 72px;
+        z-index: 200; /*sidebar appears in front of header */
+        padding-top: 5px;
+    }
+
+    .sidebar-link {
+        height: 74px;
+        display: flex;
+        justify-content: center; /* centers horizontally */
+        align-items: center; /* vertically centering */
+        flex-direction: column; /* lays out elements vertically inside flexbox */
+        cursor: pointer;
+    }
+    
+    .sidebar-link:hover {
+        background-color: rgb(235,235,235);
+    }
+    
+    
+    /* targeting all images inside cladd sidebar-link */
+    /* .classname space elements */
+    .sidebar-link img {
+        height: 24px;
+        margin-bottom: 4px;
+    }
+    
+    .sidebar-link div {
+        font-size: 10px;
+    }
+}
+/* width of page is > 1200.1px, do the following in @media {} */
+@media (min-width: 1200.1px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        top: 55px; /* set to whatever the height of the header is */
+        background-color: white;
+        width: 240px;
+        z-index: 200; /*sidebar appears in front of header */
+        padding-top: 13px;
+    }
+
+    .sidebar-link {
+        display: flex;
+        align-items: center; /* vertically centering */
+        cursor: pointer;
+        padding: 8px 24px;
+    }
+
+    .sidebar-link:hover {
+        background-color: rgb(235,235,235);
+    }
+
+    .sidebar-link img {
+        height: 24px;
+        margin-right: 24px;
+    }
+
+    .sidebar-link div {
+        font-size: 14px;
+    }
+
+}
+
