@@ -12,3 +12,5 @@ It demonstrates key front-end development skills including:
 The goal was to recreate the visual layout of YouTube's homepage using clean, semantic HTML and modern CSS practices.
 
 As a personal touch, I included my own YouTue videos in the video preview section - the last six thumbnails displayed are from my channel.
+
+[View Website](https://stevenren5.github.io/html-css-course-youtube-clone/)
