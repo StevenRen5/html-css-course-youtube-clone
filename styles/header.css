@@ -1,0 +1,194 @@
+/* styles the header */
+
+.header { /* our flexbox container */
+    height: 55px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    position: fixed; /* makes our header sticl at the top of page */
+    top: 0; /* 0px from top, left, right of browser */
+    left: 0;
+    right: 0;
+    z-index: 100; /*header will appear in front of the thumnails (the elements that have position other than static */
+    background-color: white;
+
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(228,228,228);
+
+}
+
+
+/*LEFT SECTION OF HEADER*/
+.left-section {
+    display: flex; /* the header's flexbox doesn't affect the layer within this div's layer,
+                    so change .left-section into a div in order to vertically align the hamburger and youtube icon vertically using the align-items:center */
+    align-items: center;
+}
+
+.hamburger-menu {
+    height: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.youtube-logo {
+    height: 20px;
+}
+
+
+/* MIDDLE SECTION */
+.middle-section {
+    flex: 1; /* where resizing happens, where the search text is within the div */
+    margin-left: 70px; 
+    margin-right: 35px;
+    max-width: 500px; /*width can be max 500px when stretching browsers */
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    flex: 1; /*stretches depending on size of the window and takes up remaining space */
+    height: 36px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(192,192,192);
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 3px rgba(0,0,0,0.05); /*inset value sets the box-shadow in the inside */
+    width: 0; /*search bar will shrink when resizing webpage */
+}
+
+/* targets the placeholder on an input element */
+/* uses a pseudoclass */
+.search-bar::placeholder {
+    font-size: 16px;
+}
+
+
+.search-button {
+     height: 40px;
+     width: 66px;
+     background-color: rgb(240,240,240);
+     border-width: 1px;
+     border-style: solid;
+     border-color: rgb(192,192,192);
+     margin-left: -1px; /*negative margin pulls the element, in this case to the left;
+                        we did this to move the search button into the input element a little bit */
+    margin-right: 10px;
+
+    position: relative;
+}
+
+/* applying the property of outer container with position: relative, inner element with position: absolute */
+.search-button, 
+.voice-search-button,
+.upload-icon-container,
+.youtube-apps-icon-container,
+.notifications-icon-container {
+    position: relative;
+
+    display: flex; /*set these button containers to flex, so we can align the tooltip in the center */
+    justify-content: center;
+    align-items: center;
+}
+/* ADDING TOOLTIPS */
+/* when hovering over icons, a text appears below */
+.search-button .tooltip, 
+.voice-search-button .tooltip,
+.upload-icon-container .tooltip,
+.youtube-apps-icon-container .tooltip,
+.notifications-icon-container .tooltip {
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -30px;
+    opacity: 0; /* trick: set opacity 0 and when hover set opacity 1 to see */
+    transition: opacity 0.15;
+    
+    pointer-events: none; /*when we hover over the tooltip, it's not going to do anything (won't show) */
+
+    white-space: nowrap; /* prevents text from wrapping around, so text in a horizontal line */
+}
+
+/* target tooltip only when hovering search-button */
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.youtube-apps-icon-container:hover .tooltip,
+.notifications-icon-container:hover .tooltip {
+    opacity: 1;
+}
+/* end of tooltips code */
+
+.search-icon {
+    height: 25px;
+}
+
+.voice-search-button {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px; /*set border-radius to half of height or width (whichever is higher) */
+    border: none;
+    background-color: rgb(245,245,245);
+}
+
+.voice-search-icon {
+    height: 24px;
+}
+
+
+/* RIGHT SECTION */
+.right-section{
+    width: 180px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0; /*if we resize the webpage to smaller, the icons will not shrink */
+}
+
+.upload-icon {
+    height: 24px;
+}
+
+.youtube-apps-icon {
+    height: 24px;
+}
+
+.notifications-icon{
+    height: 24px;
+}
+
+.notifications-icon-container {
+    position: relative;
+}
+
+.notifications-count {
+    position: absolute;
+    top: -2px; /*positioned 5px beyond the relative container */
+    right: -5px;
+    background-color: rgb(200,0,0);
+    color: white;
+    font-size: 11px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px;
+
+}
+
+.current-user-picture {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
