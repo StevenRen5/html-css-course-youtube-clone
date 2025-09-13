@@ -10,3 +10,5 @@ It demonstrates key front-end development skills including:
 - Proper use of **positioning (relative, absolute, fixed)** to handle the header, sidebar, and video contents, including hover-triggered tooltips displaying profile details
 
 The goal was to recreate the visual layout of YouTube's homepage using clean, semantic HTML and modern CSS practices.
+
+[View Website](https://stevenren5.github.io/html-css-course-youtube-clone/)
