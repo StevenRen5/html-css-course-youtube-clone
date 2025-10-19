@@ -11,4 +11,4 @@ It demonstrates key front-end development skills including:
 
 The goal was to recreate the visual layout of YouTube's homepage using clean, semantic HTML and modern CSS practices.
 
-[View Website](https://stevenren5.github.io/html-css-course-youtube-clone/)
+[View Website](https://html-css-course-youtube-clone.vercel.app/)
